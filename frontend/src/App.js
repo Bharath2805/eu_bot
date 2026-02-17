@@ -184,10 +184,11 @@ function App() {
               const data = JSON.parse(dataStr);
               if (data.type === 'text') {
                 assistantContent += data.content;
+                const currentContent = assistantContent;
                 setMessages(prev => {
                   const newMessages = [...prev];
                   const lastMsg = { ...newMessages[newMessages.length - 1] };
-                  lastMsg.content = assistantContent;
+                  lastMsg.content = currentContent;
                   lastMsg.loading = false;
                   newMessages[newMessages.length - 1] = lastMsg;
                   return newMessages;
