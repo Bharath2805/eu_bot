@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { Send, Upload, Loader2, X, FileText, MessageSquare, Plus, Scale, Shield } from 'lucide-react';
+import { Send, Upload, Loader2, X, FileText, MessageSquare, Plus, Shield } from 'lucide-react';
 import './App.css';
+import logo from './assets/Lawminded_logo.png';
 
 function App() {
   // Chat state
@@ -310,7 +311,7 @@ function App() {
       <aside className="sidebar">
         <div className="sidebar-header">
           <div className="logo">
-            <Scale className="logo-icon" />
+            <img src={logo} alt="LawMinded Logo" className="logo-icon-img" />
             <span>LawMinded</span>
           </div>
         </div>
@@ -369,7 +370,7 @@ function App() {
           {messages.length === 0 && (
             <div className="welcome">
               <div className="welcome-icon">
-                <Scale size={48} />
+                <img src={logo} alt="LawMinded Logo" className="welcome-logo-img" />
               </div>
               <h2>How can I help you today?</h2>
               <p>Ask me anything about EU AI Act compliance, risk classification, or documentation requirements.</p>
@@ -393,7 +394,7 @@ function App() {
               <div className={`message ${msg.role}`}>
                 {msg.role === 'assistant' && (
                   <div className="message-avatar">
-                    <Scale size={16} />
+                    <img src={logo} alt="Bot" className="avatar-icon-img" />
                   </div>
                 )}
                 <div className="message-content">

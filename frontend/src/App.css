@@ -478,6 +478,26 @@ body {
   text-align: right;
 }
 
+/* Logo Styles */
+.logo-icon-img {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+.welcome-logo-img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+}
+
+.avatar-icon-img {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
 /* ===== Typing Indicator ===== */
 .typing-indicator {
   display: flex;
